@@ -1,0 +1,153 @@
+db.clientes.find()
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1b'),
+  nombre: 'Ana',
+  ciudad: 'Lima',
+  edad: 28,
+  correo: 'ana@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1c'),
+  nombre: 'Carlos',
+  ciudad: 'Bogotá',
+  edad: 34,
+  correo: 'carlos@yahoo.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1d'),
+  nombre: 'María',
+  ciudad: 'Lima',
+  edad: 22,
+  correo: 'maria@hotmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1e'),
+  nombre: 'José',
+  ciudad: 'Quito',
+  edad: 40,
+  correo: 'jose@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1f'),
+  nombre: 'Lucía',
+  ciudad: 'Bogotá',
+  edad: 19,
+  correo: 'lucia@outlook.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b20'),
+  nombre: 'Pedro',
+  ciudad: 'Lima',
+  edad: 35,
+  correo: 'pedro@gmail.com'
+}
+
+db.clientes.find({ ciudad: "Lima" })
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1b'),
+  nombre: 'Ana',
+  ciudad: 'Lima',
+  edad: 28,
+  correo: 'ana@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1d'),
+  nombre: 'María',
+  ciudad: 'Lima',
+  edad: 22,
+  correo: 'maria@hotmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b20'),
+  nombre: 'Pedro',
+  ciudad: 'Lima',
+  edad: 35,
+  correo: 'pedro@gmail.com'
+}
+
+db.clientes.find({ edad: { $gt: 30 } })
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1c'),
+  nombre: 'Carlos',
+  ciudad: 'Bogotá',
+  edad: 34,
+  correo: 'carlos@yahoo.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1e'),
+  nombre: 'José',
+  ciudad: 'Quito',
+  edad: 40,
+  correo: 'jose@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b20'),
+  nombre: 'Pedro',
+  ciudad: 'Lima',
+  edad: 35,
+  correo: 'pedro@gmail.com'
+}
+
+db.clientes.find({ edad: { $lte: 22 } })
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1d'),
+  nombre: 'María',
+  ciudad: 'Lima',
+  edad: 22,
+  correo: 'maria@hotmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1f'),
+  nombre: 'Lucía',
+  ciudad: 'Bogotá',
+  edad: 19,
+  correo: 'lucia@outlook.com'
+}
+
+db.clientes.find({ ciudad: { $ne: "Bogotá" } })
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1b'),
+  nombre: 'Ana',
+  ciudad: 'Lima',
+  edad: 28,
+  correo: 'ana@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1d'),
+  nombre: 'María',
+  ciudad: 'Lima',
+  edad: 22,
+  correo: 'maria@hotmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1e'),
+  nombre: 'José',
+  ciudad: 'Quito',
+  edad: 40,
+  correo: 'jose@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b20'),
+  nombre: 'Pedro',
+  ciudad: 'Lima',
+  edad: 35,
+  correo: 'pedro@gmail.com'
+}
+
+db.clientes.find({ ciudad: "Lima", edad: { $gt: 25 } })
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1b'),
+  nombre: 'Ana',
+  ciudad: 'Lima',
+  edad: 28,
+  correo: 'ana@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b20'),
+  nombre: 'Pedro',
+  ciudad: 'Lima',
+  edad: 35,
+  correo: 'pedro@gmail.com'
+}
+
+

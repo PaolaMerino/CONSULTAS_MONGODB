@@ -1,0 +1,8 @@
+db.clientes.createIndex({ ciudad: 1 })
+ciudad_1
+db.clientes.createIndex({ ciudad: 1, edad: -1 })
+ciudad_1_edad_-1
+db.clientes.createIndex({ correo: 1 }, { unique: true })
+correo_1
+
+

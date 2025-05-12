@@ -1,0 +1,138 @@
+db.clientes.find({ nombre: "Pedro" }).explain("executionStats")
+{
+      isCached: false,
+      stage: 'COLLSCAN',
+      filter: {
+        nombre: {
+          '$eq': 'Pedro'
+        }
+      },
+      direction: 'forward'
+    },
+    rejectedPlans: []
+  },
+  executionStats: {
+    executionSuccess: true,
+    nReturned: 1,
+    executionTimeMillis: 4,
+    totalKeysExamined: 0,
+    totalDocsExamined: 6,
+    executionStages: {
+      isCached: false,
+      stage: 'COLLSCAN',
+      filter: {
+        nombre: {
+          '$eq': 'Pedro'
+        }
+      },
+      nReturned: 1,
+      executionTimeMillisEstimate: 0,
+      works: 7,
+      advanced: 1,
+      needTime: 5,
+      needYield: 0,
+      saveState: 0,
+      restoreState: 0,
+      isEOF: 1,
+      direction: 'forward',
+      docsExamined: 6
+    }
+  },
+  queryShapeHash: '21F6F3D3AC28DC46BEE1C29708F31371F81E08D146D974D3DDE71551408744B7',
+  command: {
+    find: 'clientes',
+    filter: {
+      nombre: 'Pedro'
+    },
+    '$db': 'usuarioUNAB'
+  },
+  serverInfo: {
+    host: 'DESKTOP-M2MKKJ7',
+    port: 27017,
+    version: '8.0.8',
+    gitVersion: '7f52660c14217ed2c8d3240f823a2291a4fe6abd'
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 104857600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 104857600,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: 'trySbeRestricted',
+    internalQueryPlannerIgnoreIndexWithCollationForRegex: 1
+  },
+  ok: 1
+}
+db.clientes.createIndex({ nombre: 1 })
+nombre_1
+db.clientes.find({ nombre: "Pedro" }).explain("executionStats")
+{
+      inputStage: {
+        stage: 'IXSCAN',
+        nReturned: 1,
+        executionTimeMillisEstimate: 10,
+        works: 2,
+        advanced: 1,
+        needTime: 0,
+        needYield: 0,
+        saveState: 0,
+        restoreState: 0,
+        isEOF: 1,
+        keyPattern: {
+          nombre: 1
+        },
+        indexName: 'nombre_1',
+        isMultiKey: false,
+        multiKeyPaths: {
+          nombre: []
+        },
+        isUnique: false,
+        isSparse: false,
+        isPartial: false,
+        indexVersion: 2,
+        direction: 'forward',
+        indexBounds: {
+          nombre: [
+            '["Pedro", "Pedro"]'
+          ]
+        },
+        keysExamined: 1,
+        seeks: 1,
+        dupsTested: 0,
+        dupsDropped: 0
+      }
+    }
+  },
+  queryShapeHash: '21F6F3D3AC28DC46BEE1C29708F31371F81E08D146D974D3DDE71551408744B7',
+  command: {
+    find: 'clientes',
+    filter: {
+      nombre: 'Pedro'
+    },
+    '$db': 'usuarioUNAB'
+  },
+  serverInfo: {
+    host: 'DESKTOP-M2MKKJ7',
+    port: 27017,
+    version: '8.0.8',
+    gitVersion: '7f52660c14217ed2c8d3240f823a2291a4fe6abd'
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 104857600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 104857600,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: 'trySbeRestricted',
+    internalQueryPlannerIgnoreIndexWithCollationForRegex: 1
+  },
+  ok: 1
+}
+usuarioUNAB
+

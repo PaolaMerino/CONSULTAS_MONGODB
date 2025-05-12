@@ -1,0 +1,139 @@
+db.clientes.find().sort({ edad: 1 })
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1f'),
+  nombre: 'Lucía',
+  ciudad: 'Bogotá',
+  edad: 19,
+  correo: 'lucia@outlook.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1d'),
+  nombre: 'María',
+  ciudad: 'Lima',
+  edad: 22,
+  correo: 'maria@hotmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1b'),
+  nombre: 'Ana',
+  ciudad: 'Lima',
+  edad: 28,
+  correo: 'ana@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1c'),
+  nombre: 'Carlos',
+  ciudad: 'Bogotá',
+  edad: 34,
+  correo: 'carlos@yahoo.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b20'),
+  nombre: 'Pedro',
+  ciudad: 'Lima',
+  edad: 35,
+  correo: 'pedro@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1e'),
+  nombre: 'José',
+  ciudad: 'Quito',
+  edad: 40,
+  correo: 'jose@gmail.com'
+}
+db.clientes.find().sort({ edad: -1 })
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1e'),
+  nombre: 'José',
+  ciudad: 'Quito',
+  edad: 40,
+  correo: 'jose@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b20'),
+  nombre: 'Pedro',
+  ciudad: 'Lima',
+  edad: 35,
+  correo: 'pedro@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1c'),
+  nombre: 'Carlos',
+  ciudad: 'Bogotá',
+  edad: 34,
+  correo: 'carlos@yahoo.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1b'),
+  nombre: 'Ana',
+  ciudad: 'Lima',
+  edad: 28,
+  correo: 'ana@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1d'),
+  nombre: 'María',
+  ciudad: 'Lima',
+  edad: 22,
+  correo: 'maria@hotmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1f'),
+  nombre: 'Lucía',
+  ciudad: 'Bogotá',
+  edad: 19,
+  correo: 'lucia@outlook.com'
+}
+db.clientes.find().limit(3)
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1b'),
+  nombre: 'Ana',
+  ciudad: 'Lima',
+  edad: 28,
+  correo: 'ana@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1c'),
+  nombre: 'Carlos',
+  ciudad: 'Bogotá',
+  edad: 34,
+  correo: 'carlos@yahoo.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1d'),
+  nombre: 'María',
+  ciudad: 'Lima',
+  edad: 22,
+  correo: 'maria@hotmail.com'
+}
+db.clientes.find().skip(2)
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1d'),
+  nombre: 'María',
+  ciudad: 'Lima',
+  edad: 22,
+  correo: 'maria@hotmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1e'),
+  nombre: 'José',
+  ciudad: 'Quito',
+  edad: 40,
+  correo: 'jose@gmail.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b1f'),
+  nombre: 'Lucía',
+  ciudad: 'Bogotá',
+  edad: 19,
+  correo: 'lucia@outlook.com'
+}
+{
+  _id: ObjectId('68222c723a5fb2e0f4714b20'),
+  nombre: 'Pedro',
+  ciudad: 'Lima',
+  edad: 35,
+  correo: 'pedro@gmail.com'
+}
+
+

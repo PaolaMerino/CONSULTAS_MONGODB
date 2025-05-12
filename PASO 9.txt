@@ -1,0 +1,16 @@
+db.clientes.insertOne({ nombre: "Otro", ciudad: "Cali", edad: 30, correo: "pedroa@gmail.com" })
+{
+  acknowledged: true,
+  insertedId: ObjectId('682239813a5fb2e0f4714b22')
+}
+
+db.clientes.find({ nombre: "Otro" })
+{
+  _id: ObjectId('682239813a5fb2e0f4714b22'),
+  nombre: 'Otro',
+  ciudad: 'Cali',
+  edad: 30,
+  correo: 'pedroa@gmail.com'
+}
+
+

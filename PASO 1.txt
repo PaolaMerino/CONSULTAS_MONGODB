@@ -1,0 +1,28 @@
+use usuarioUNAB
+switched to db usuarioUNAB
+db.createCollection ('clientes')
+{ ok: 1 }
+db.clientes.insertMany([
+
+  { nombre: "Ana", ciudad: "Lima", edad: 28, correo: "ana@gmail.com" },
+
+  { nombre: "Carlos", ciudad: "Bogotá", edad: 34, correo: "carlos@yahoo.com" },
+
+  { nombre: "María", ciudad: "Lima", edad: 22, correo: "maria@hotmail.com" },
+
+  { nombre: "José", ciudad: "Quito", edad: 40, correo: "jose@gmail.com" },
+
+  { nombre: "Lucía", ciudad: "Bogotá", edad: 19, correo: "lucia@outlook.com" },
+
+  { nombre: "Pedro", ciudad: "Lima", edad: 35, correo: "pedro@gmail.com" } ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('68222c723a5fb2e0f4714b1b'),
+    '1': ObjectId('68222c723a5fb2e0f4714b1c'),
+    '2': ObjectId('68222c723a5fb2e0f4714b1d'),
+    '3': ObjectId('68222c723a5fb2e0f4714b1e'),
+    '4': ObjectId('68222c723a5fb2e0f4714b1f'),
+    '5': ObjectId('68222c723a5fb2e0f4714b20')
+  }
+}
